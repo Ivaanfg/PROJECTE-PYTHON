@@ -12,3 +12,5 @@ def dau():
     import random
     llançar = print("Llançant el dau ...", "Ha sortit:", random.randint(1, 6))
     return llançar
+
+#joan
