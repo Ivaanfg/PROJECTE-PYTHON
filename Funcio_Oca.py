@@ -26,3 +26,14 @@ def cult(joan, fila, columna, producto):
         joan[fila][columna] = "X"
     else:
         print("ja hi ha un cultiu alla. ")
+#from funcion import printdici,cult
+campo = {0:["","-","-","-","-"],
+        1:["-","-","-","-","-"],
+        2:["-","-","-","-","-"],
+        3:["-","-","-","-","-"],
+        4:["-","-","-","-","-"],
+        5:["-","-","-","-","-"]}
+
+printdici(campo)
+cult(campo,2,3,"s")
+printdici(campo)
