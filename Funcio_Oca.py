@@ -23,3 +23,19 @@ def tauler():
         
     
     return tablero
+
+#Funcio Tablero 
+def mostrar_tablero():
+    tablero = {0: ["-", "-", "-", "-", "-"],
+               1: ["-", "-", "-", "-", "-"],
+               2: ["-", "-", "-", "-", "-"],
+               3: ["-", "-", "-", "-", "-"],
+               4: ["-", "-", "-", "-", "-"],
+               5: ["-", "-", "-", "-", "-"]}
+    for x in tablero:
+        for y in tablero[x]:
+            print(y, end="")
+        print()
+    print()
+#Print per mostrar la funcio del tablero com funciona.
+print(mostrar_tablero())
