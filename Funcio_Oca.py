@@ -12,4 +12,17 @@ def dau():
     import random
     llançar = print("Llançant el dau ...", "Ha sortit:", random.randint(1, 6))
     return llançar
+#Exercici cultius per agafar de referencia per fer el taulell:
+def printdici(printdici):
+    for x in printdici:
+        for y in printdici[x]:
+            print(y, end="")
+        print()
+    print()
 
+
+def cult(joan, fila, columna, producto):
+    if joan[fila][columna] == "-":
+        joan[fila][columna] = "X"
+    else:
+        print("ja hi ha un cultiu alla. ")
