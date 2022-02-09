@@ -1,0 +1,4 @@
+# PROJECTE-PYTHON
+Projecte UF2 Python | Tauler de jocs
+
+//AFEGIR EL RECULL DE LAS TASCA DIARIA
