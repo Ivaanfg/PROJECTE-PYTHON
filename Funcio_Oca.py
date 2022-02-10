@@ -24,3 +24,33 @@ def tauler():
 
 print(tauler())
 
+def fitxa_persona():
+    #començar partida
+    start = input("Vols començar la partida ? S/N")
+    fitxa1 = "0"
+    fitxa2 = "1"
+    da = dau()
+
+    tau = tauler()
+    while start != "N":
+        if start == "S":
+            print("Ara comença la partida...")
+        if da == 1:
+            tau.update(fitxa1[0]=[1])
+        if da == 2:
+            tau.update(fitxa1[0]=[2])
+        if da == 3:
+            tau.update(fitxa1[0]=[3])
+        if da == 4:
+            tau.update(fitxa1[0]=[4])
+        if da == 5:
+            tau.update(fitxa1[0]=[5])
+        if da == 6:
+            tau.update(fitxa1[0]=[6])
+    return tau
+print(fitxa_persona())
+
+
+
+
+
