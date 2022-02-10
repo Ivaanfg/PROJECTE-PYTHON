@@ -5,3 +5,5 @@ Hem aconseguit crear la funció del dau i hem començat a fer el tauler.
 
 Día 2:
 ------
+Hem intentat començar a fer la funcio de la oca que fa que comenci la partida, tiri els daus, avanci posicions. Pero no hi ha manera.
+PD: Es darrera hora dijous...
