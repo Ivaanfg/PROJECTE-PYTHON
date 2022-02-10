@@ -1,2 +1,7 @@
 Día 1:
+------
+El primer día hem començat amb el joc de la oca.
+Hem aconseguit crear la funció del dau i hem començat a fer el tauler.
+
 Día 2:
+------
