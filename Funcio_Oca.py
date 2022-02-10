@@ -28,11 +28,11 @@ def fitxa_persona():
     da = dau()
     tau = tauler()
     start = input("Vols començar la partida ? S/N")
-    
+
     while start != "N":
-        
+
         print("Ara comença la partida...")
-        
+
         if da == 1:
             tau.update(fitxa1[1])
         if da == 2:
@@ -50,7 +50,7 @@ print(fitxa_persona())
 
 
 
-
+"""
 def caselles_especials()
     taul = tauler()
     f1 = fi
@@ -66,3 +66,4 @@ def caselles_especials()
 
     forx
 
+"""
