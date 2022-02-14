@@ -7,3 +7,7 @@ Día 2:
 ------
 Hem intentat començar a fer la funcio de la oca que fa que comenci la partida, tiri els daus, avanci posicions. Pero no hi ha manera.
 PD: Es darrera hora dijous...
+
+Día 3:
+------
+Hem creat una funcio "fitxa" que es va sumant amb funció del resultat de la funció "dau". Per exemple si el dau es == 3 la funció fitxa sumará 3 posicions dins la funcií "tauler"
