@@ -7,13 +7,12 @@ def dau():
 
 def tauler():
 
-    tablero = {0: ["[]", "[]", "[]", "[]", "2", "__", "[]", "[]", "2", "[]", "[]"],
-               1: ["__", "[]", "2", "[]", "[]", "[]", "2", "--", "[]", "[]", "[]"],
-               2: ["2", "[]", "[]", "O", "2", "[]", "[]", "[]", "|__|", "2", "[]"],
-               3: ["[]", "[]", "2", "[]", "[]", "[]", "[]", "2", "LA", "[]", "[]"],
-               4: ["2", "[]", "[]", "[]", "[]", "2", "[]", "[]", "[]", "2", "[]"],
-               5: ["||", "[]", "O", "2", "[]", "[]", "[]", ":(", "[]", "[]", "[]"]}
-
+    tablero = {0: ["[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]"]}
     for x in tablero:
         for y in tablero[x]:
             print(y, end="")
@@ -21,32 +20,29 @@ def tauler():
     print()
     return tablero
 
-def fitxa_persona():
-    #començar partida
-    fitxa1 = "0"
-    fitxa2 = "1"
+def fitxa1():
+
     da = dau()
     tau = tauler()
-    start = input("Vols començar la partida ? S/N")
+    fitxa = 0
 
-    while start != "N":
+    if da == 1:
+        fitxa + 1
+    if da == 2:
+        fitxa + 2
+    if da == 3:
+        fitxa + 3
+    if da == 4:
+        fitxa + 4
+    if da == 5:
+        fitxa + 5
+    if da == 6:
+        fitxa + 6
 
-        print("Ara comença la partida...")
+    for fitxa in range(tau):
+        tau.update([0,fitxa])
 
-        if da == 1:
-            tau.update(fitxa1[1])
-        if da == 2:
-            tau.update(fitxa1[2])
-        if da == 3:
-            tau.update(fitxa1[3])
-        if da == 4:
-            tau.update(fitxa1[4])
-        if da == 5:
-            tau.update(fitxa1[5])
-        if da == 6:
-            tau.update(fitxa1[6])
-    return tau
-print(fitxa_persona())
+print(fitxa1())
 
 
 
@@ -65,5 +61,11 @@ def caselles_especials()
     calavera = taul(58)
 
     forx
+    
+                 Start
+start = input("Vols començar la partida ? S/N")
 
+    while start != "N":
+
+        print("Ara comença la partida...")
 """
