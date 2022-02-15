@@ -21,7 +21,7 @@ def tauler():
     return tablero
 
 def fitxa1():
-
+    da = dau()
     tau = tauler()
     fitxa = "@"
     posi = 0
@@ -29,7 +29,7 @@ def fitxa1():
     tirar = input("Vols tirar? S/N")
 
     while tirar != "N":
-        da = dau()
+        
         if da == 1:
             posi += 1
             casella = tau[0][posi]
