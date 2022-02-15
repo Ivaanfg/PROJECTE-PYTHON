@@ -22,27 +22,41 @@ def tauler():
 
 def fitxa1():
 
-    da = dau()
     tau = tauler()
-    fitxa = 0
+    fitxa = "@"
+    posi = 0
+    casella = "[]"
+    tirar = input("Vols tirar? S/N")
 
-    if da == 1:
-        fitxa + 1
-    if da == 2:
-        fitxa + 2
-    if da == 3:
-        fitxa + 3
-    if da == 4:
-        fitxa + 4
-    if da == 5:
-        fitxa + 5
-    if da == 6:
-        fitxa + 6
-
-    for fitxa in range(tau):
-        tau.update([0,fitxa])
-
-print(fitxa1())
+    while tirar != "N":
+        da = dau()
+        if da == 1:
+            posi += 1
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        elif da == 2:
+            posi += 2
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        elif da == 3:
+            posi += 3
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        elif da == 4:
+            posi += 4
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        elif da == 5:
+            posi += 5
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        elif da == 6:
+            posi += 6
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        else:
+            print("D'acord")
+    return tau
 
 
 
