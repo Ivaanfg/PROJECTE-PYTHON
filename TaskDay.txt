@@ -10,7 +10,8 @@ PD: Es darrera hora dijous...
 
 Día 3:
 ------
-Hem creat una funcio "fitxa" que es va sumant amb funció del resultat de la funció "dau". Per exemple si el dau es == 3 la funció fitxa sumará 3 posicions dins la funcií "tauler"
+Hem creat una funcio "fitxa" que es va sumant amb funció del resultat de la funció "dau". 
+Per exemple si el dau es == 3 la funció fitxa sumará 3 posicions dins la funcií "tauler".
 
 Día 4:
 ------
