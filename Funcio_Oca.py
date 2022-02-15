@@ -21,48 +21,44 @@ def tauler():
     return tablero
 
 def fitxa1():
-    da = dau()
-    tau = tauler()
+
     fitxa = "@"
     posi = 0
-    casella = "[]"
-    tirar = input("Intordueix 'o' per començar a jugar")
+    start = input("Intordueix 'o' per començar a jugar")
 
-    while tirar != "N":
+    while start == "o":
+        da = dau()
+        tau = tauler()
         casella = "[]"
         if da == 1:
             posi += 1
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
         if da == 2:
             posi += 2
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
         if da == 3:
             posi += 3
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
         if da == 4:
             posi += 4
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
         if da == 5:
             posi += 5
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
         if da == 6:
             posi += 6
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-            tirar = input("Vols tirar? S/N")
-        if tirar == "S":
+        else:
             print("D'acord")
             break
+        
+
     return tau
 
 
