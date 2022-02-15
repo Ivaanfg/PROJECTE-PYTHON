@@ -16,6 +16,7 @@ Per exemple si el dau es == 3 la funció fitxa sumará 3 posicions dins la funci
 Día 4:
 ------
 Avui mirarem de fer que es printi el tauler amb les fitxes a les posicions corresponents i que les anteriors posicions de les fiches retornin al seu estat original.
+Hem aconseguit fer que la fitxa_1 es printi al taulell, esteim intentant que la posició que tenia anteriorment retorni al seu estat original.
 
 Día 5:
 ------
