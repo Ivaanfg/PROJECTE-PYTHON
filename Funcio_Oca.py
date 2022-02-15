@@ -7,12 +7,12 @@ def dau():
 
 def tauler():
 
-    tablero = {0: ["[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
+    tablero = {0: ["[START]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
-                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]"]}
+                   "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[END]"]}
     for x in tablero:
         for y in tablero[x]:
             print(y, end="")
@@ -26,36 +26,43 @@ def fitxa1():
     fitxa = "@"
     posi = 0
     casella = "[]"
-    tirar = input("Vols tirar? S/N")
+    tirar = input("Intordueix 'o' per començar a jugar")
 
     while tirar != "N":
-        
+        casella = "[]"
         if da == 1:
             posi += 1
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        elif da == 2:
+            tirar = input("Vols tirar? S/N")
+        if da == 2:
             posi += 2
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        elif da == 3:
+            tirar = input("Vols tirar? S/N")
+        if da == 3:
             posi += 3
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        elif da == 4:
+            tirar = input("Vols tirar? S/N")
+        if da == 4:
             posi += 4
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        elif da == 5:
+            tirar = input("Vols tirar? S/N")
+        if da == 5:
             posi += 5
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        elif da == 6:
+            tirar = input("Vols tirar? S/N")
+        if da == 6:
             posi += 6
             casella = tau[0][posi]
             tau[0][posi] = fitxa
-        else:
+            tirar = input("Vols tirar? S/N")
+        if tirar == "S":
             print("D'acord")
+            break
     return tau
 
 
