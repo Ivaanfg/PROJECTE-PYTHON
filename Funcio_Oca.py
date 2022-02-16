@@ -60,6 +60,46 @@ def fitxa1():
             break
         return tau
 
+def fitxa2():
+
+    fitxa = "#"
+    posi = 0
+    start = input("Intordueix 'o' per començar a jugar")
+
+    while start == "o":
+        inici = input("Vols llançar el dau ? S/N")
+        if inici == "S":
+            da = dau()
+            tau = tauler()
+            casella = "[]"
+        if da == 1:
+            posi += 1
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        if da == 2:
+            posi += 2
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        if da == 3:
+            posi += 3
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        if da == 4:
+            posi += 4
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        if da == 5:
+            posi += 5
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        if da == 6:
+            posi += 6
+            casella = tau[0][posi]
+            tau[0][posi] = fitxa
+        else:
+            break
+        return tau
+
 
 
 """
