@@ -27,9 +27,11 @@ def fitxa1():
     start = input("Intordueix 'o' per començar a jugar")
 
     while start == "o":
-        da = dau()
-        tau = tauler()
-        casella = "[]"
+        inici = input("Vols llançar el dau ? S/N")
+        if inici == "S":
+            da = dau()
+            tau = tauler()
+            casella = "[]"
         if da == 1:
             posi += 1
             casella = tau[0][posi]
@@ -55,11 +57,8 @@ def fitxa1():
             casella = tau[0][posi]
             tau[0][posi] = fitxa
         else:
-            print("D'acord")
             break
-        
-
-    return tau
+        return tau
 
 
 
