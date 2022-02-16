@@ -19,7 +19,8 @@ Hem aconseguit fer que la fitxa_1 es printi al taulell, esteim intentant que la 
 
 Día 5:
 ------
-
+Hem començat a cercar la manera de fer que primer tiri un i despres l'altre. 
+Tambe hem acabat de fer funcionar les fitxes.
 Día 6:
 ------
 
