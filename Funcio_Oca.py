@@ -20,45 +20,87 @@ def tauler():
     print()
     return tablero
 
-def fitxa1():
+def fitxa1(tau):
 
     fitxa = "@"
     posi = 0
-    start = input("Intordueix 'o' per començar a jugar")
-
-    while start == "o":
-        inici = input("Vols llançar el dau ? S/N")
-        if inici == "S":
-            da = dau()
-            tau = tauler()
-            casella = "[]"
-        if da == 1:
-            posi += 1
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        if da == 2:
-            posi += 2
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        if da == 3:
-            posi += 3
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        if da == 4:
-            posi += 4
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        if da == 5:
-            posi += 5
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        if da == 6:
-            posi += 6
-            casella = tau[0][posi]
-            tau[0][posi] = fitxa
-        else:
-            break
+    inici = input("Vols llançar el dau ? S/N")
+    if inici == "S":
+        da = dau()
+        casella = "[]"
+    if da == 1:
+        posi += 1
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 2:
+        posi += 2
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 3:
+        posi += 3
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 4:
+        posi += 4
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 5:
+        posi += 5
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 6:
+        posi += 6
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
     return tau
+
+
+def fitxa2(tau):
+
+    fitxa = "#"
+    posi = 0
+    casella = "[]"
+    print("Turn del pc :")
+    da = dau()
+    if da == 1:
+        posi += 1
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 2:
+        posi += 2
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 3:
+        posi += 3
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 4:
+        posi += 4
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 5:
+        posi += 5
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+    if da == 6:
+        posi += 6
+        casella = tau[0][posi]
+        tau[0][posi] = fitxa
+
+    return tau
+
+def partida():
+    tab = tauler()
+    f1 = fitxa1(tab)
+    f2 = fitxa2(tab)
+    començar_joc = input("Vols començar el joc? S/N")
+    if començar_joc == "S":
+        fa = input("Vols començar el joc? S/N")
+        while fa != "N":
+            f1
+            f2
+    else:
+        print("Vale adeu...")
 
 
 
