@@ -97,8 +97,8 @@ def partida():
     if començar_joc == "S":
         fa = input("Vols començar el joc? S/N")
         while fa != "N":
-            f1
-            f2
+            print(f1)
+            print(f2)
     else:
         print("Vale adeu...")
 
