@@ -23,7 +23,7 @@ Hem començat a cercar la manera de fer que primer tiri un i despres l'altre.
 Tambe hem acabat de fer funcionar les fitxes.
 Día 6:
 ------
-
+Avui hem aconseguit fer que els torns vaigin com toca, faltara acabar de depurar el joc i variables.
 Día 7:
 ------
 
