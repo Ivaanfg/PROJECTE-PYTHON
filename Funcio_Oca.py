@@ -90,18 +90,16 @@ def fitxa2(tau):
     return tau
 
 def partida():
-    tab = tauler()
-    f1 = fitxa1(tab)
-    f2 = fitxa2(tab)
+
     començar_joc = input("Vols començar el joc? S/N")
     if començar_joc == "S":
-        fa = input("Vols començar el joc? S/N")
-        while fa != "N":
+        f2 = tauler()
+        final = "si"
+        while final == "si":
+            f1 = fitxa1(f2)
             print(f1)
+            f2 = fitxa2(f1)
             print(f2)
-    else:
-        print("Vale adeu...")
-
 
 
 """
@@ -120,10 +118,5 @@ def caselles_especials()
 
     forx
     
-                 Start
-start = input("Vols començar la partida ? S/N")
-
-    while start != "N":
-
-        print("Ara comença la partida...")
+                 
 """
