@@ -29,6 +29,8 @@ Ara hem de mirar com anar actualitzant el diccionari perque no surti dues vegade
 
 Día 7:
 ------
+Avui hem aconseguit que les posicions de fitxa 1 i fitxa 2, es vaigin sumant i es coloquin damunt el tauler.
+Ens falta que elimini la posició anterior, perquè ens surt l'anterior i la nova.
 
 Día 8:
 ------
