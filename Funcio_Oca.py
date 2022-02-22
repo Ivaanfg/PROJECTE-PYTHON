@@ -103,6 +103,8 @@ def partida():
 
 
 """
+per canviar l'antiga posicio hem de fer un posicio mes dau per avancar la fixa i despres un posicio menos dau diguent-li que retorni al seu estat la posicio.
+
 def caselles_especials()
     taul = tauler()
     f1 = fi
