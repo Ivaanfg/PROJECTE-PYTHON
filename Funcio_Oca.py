@@ -1,4 +1,5 @@
 def dau():
+
     import random
     dado = random.randint(1, 6)
     print("Llançant el dau ...", "Ha sortit:", dado)
@@ -6,6 +7,7 @@ def dau():
 
 
 def tauler():
+
     tablero = {0: ["[START]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
                    "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]",
@@ -20,84 +22,34 @@ def tauler():
     return tablero
 
 
-def fitxa1(tau, posi1,casella):
-    fitxa = "@"
-    inici = input("Vols llançar el dau ? S/N")
-    if inici == "S":
-        da = dau()
-        casella = tau[posi1]
-    if da == 1:
-        posi1 += 1
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    if da == 2:
-        posi1 += 2
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    if da == 3:
-        posi1 += 3
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    if da == 4:
-        posi1 += 4
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    if da == 5:
-        posi1 += 5
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    if da == 6:
-        posi1 += 6
-        casella = tau[0][posi1]
-        tau[0][posi1] = fitxa
-    return tau,posi1,casella
-
-
-def fitxa2(tau, posi2,casella2):
-    fitxa = "#"
+def fitxa(tau, posi, ID):
+    fitxa = "codi"
+    if ID ==1:
+        fitxa = "@"
+    else:
+        fitxa ="#"
     print("Turn del pc :")
     da = dau()
-    casella2 = tau[posi2]
-    if da == 1:
-        posi2 += 1
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
-    if da == 2:
-        posi2 += 2
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
-    if da == 3:
-        posi2 += 3
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
-    if da == 4:
-        posi2 += 4
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
-    if da == 5:
-        posi2 += 5
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
-    if da == 6:
-        posi2 += 6
-        casella2 = tau[0][posi2]
-        tau[0][posi2] = fitxa
+    posi += da
+    casella = tau[0][posi]
+    tau[0][posi] = fitxa
 
-    return tau,posi2,casella2
-
+    return tau, posi,ID
 
 def partida():
+
     començar_joc = input("Vols començar el joc? S/N")
     if començar_joc == "S":
         f2 = tauler()
-        final = "si"
         posi1 = 0
         posi2 = 0
-        while final == "si":
-            f1,posi1,casella = fitxa1(f2,posi1,casella)
-            print(f1)
-            f2,posi2,casella2 = fitxa2(f1,posi2,casella2)
-            print(f2)
+        while posi1 <= 63:
+            pregunta = input("tirar S/N")
+            if (pregunta == "S"):
+                f1, posi1,ID = fitxa(f2, posi1,1)
+                print(f1)
+                f2, posi2,ID = fitxa(f1, posi2,2)
+                print(f2)
 
 
 """
@@ -115,6 +67,6 @@ def caselles_especials()
     calavera = taul(58)
 
     forx
-    
-                 
+
+
 """
