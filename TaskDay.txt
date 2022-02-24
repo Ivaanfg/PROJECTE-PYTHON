@@ -34,7 +34,8 @@ Ens falta que elimini la posició anterior, perquè ens surt l'anterior i la nov
 
 Día 8:
 ------
-
+Avui hem depurat molt el codi de l'avanç de les fitxes i hem aplicat les caselles especials.
+Esteim pendents de acabaar de pensar com tornar l'estat original de les caselles.
 Día 9:
 ------
 
