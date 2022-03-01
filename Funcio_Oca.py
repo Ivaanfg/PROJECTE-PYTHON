@@ -61,6 +61,8 @@ def partida():
 
     començar_joc = input("Vols començar el joc? S/N")
     if començar_joc == "S":
+        print("Jugador 1 : 🟨")
+        print("PC : 🟥")
         f2 = tauler()
         posi1 = 0
         posi2 = 0
