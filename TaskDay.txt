@@ -38,7 +38,7 @@ Avui hem depurat molt el codi de l'avanç de les fitxes i hem aplicat les casell
 Esteim pendents de acabaar de pensar com tornar l'estat original de les caselles.
 Día 9:
 ------
-
+Avui hem aconseguit que les caselles anteriors de les fitxes retornin al seu estat anterior i ja esteim pensant com fer que funcionin les caselles especials.
 Día 10:
 ------
 
