@@ -13,7 +13,7 @@ def tauler():
                    "[]", "[🦆]", "[]", "[]", "[🎲]", "[🦆]", "[]", "[]", "[]", "[🕳️]", "[🦆]",
                    "[]", "[]", "[]", "[🦆]", "[]", "[]", "[]", "[]", "[🦆]", "[🐍]", "[]",
                    "[]", "[🦆]", "[]", "[]", "[]", "[]", "[🦆]", "[]", "[]", "[🎲]", "[🦆]",
-                   "[]", "[⛓]", "[]", "💀", "[🦆]", "[]", "[]", "[]", "[]", "[]", "[END]"]}
+                   "[]", "[⛓]", "[]", "[💀]", "[🦆]", "[]", "[]", "[]", "[]", "[]", "[END]"]}
     for x in tablero:
         for y in tablero[x]:
             print(y, end="")
@@ -34,7 +34,27 @@ def fitxa(tau, posi, ID):
     posi += da
     casella = tau[0][posi]
     tau[0][posi] = fitxa
-
+    posi_anterior = posi - da
+    llista_oca = [5,9,14,18,23,27,32,36,41,45,50,54,59]
+    if posi_anterior == 0:
+       tau[0]="[START]"
+    if posi_anterior in llista_oca:
+       tau[posi_anterior]="[🦆]"
+    if posi_anterior == 6 or 12:
+       tau[0]="[🌉]"
+    if posi_anterior == 19:
+       tau[0]="[🏠]"
+    if posi_anterior == 31:
+       tau[0]="[🕳]"
+    if posi_anterior == 42:
+       tau[0]="[🐍]"
+    if posi_anterior == 56:
+       tau[0]="[⛓]"
+    if posi_anterior == 26 or 53:
+       tau[0]="[🎲]"
+    if posi_anterior == 58:
+       tau[0]="[💀]"    
+       
     return tau, posi,ID
 
 def partida():
