@@ -36,8 +36,11 @@ def fitxa(tau, posi, ID):
     tau[0][posi] = fitxa
     posi_anterior = posi - da
     llista_oca = [5,9,14,18,23,27,32,36,41,45,50,54,59]
+    psoicions_buies  = [1,2,3,4,7,8,10,11,13,15,16,17,20,21,22,24,25,28,29,30,33,34,35,37,38,39,40,43,44,46,47,48,48,51,52,53,57,60,61,62,63,64]
     if posi_anterior == 0:
        tau[0]="[START]"
+    if posi_anterior in psoicions_buies:
+       tau[posi_anterior]="[]"
     if posi_anterior in llista_oca:
        tau[posi_anterior]="[🦆]"
     if posi_anterior == 6 or 12:
@@ -54,6 +57,8 @@ def fitxa(tau, posi, ID):
        tau[0]="[🎲]"
     if posi_anterior == 58:
        tau[0]="[💀]"    
+    if posi_anterior == 65:
+       tau[0]="[END]"
        
     return tau, posi,ID
 
