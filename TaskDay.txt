@@ -41,7 +41,8 @@ Día 9:
 Avui hem aconseguit que les caselles anteriors de les fitxes retornin al seu estat anterior i ja esteim pensant com fer que funcionin les caselles especials.
 Día 10:
 ------
-
+Avui hem estat els galls de la vall i hem aconseguit que les caselles especials casi funcionin be. 
+PD: Ja hi queda poc.
 Día 11:
 ------
 
