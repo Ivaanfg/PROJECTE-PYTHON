@@ -23,6 +23,7 @@ def tauler():
 
 
 def fitxa(tau, posi, ID):
+    guanyador = ""
     fitxa = "codi"
     anterior = 0
     if ID ==1:
@@ -153,11 +154,9 @@ def fitxa(tau, posi, ID):
         posi -= 58
         
     """FI""" 
-    if id=1 [0][65]:
-        print("Ha guanyat fitxa1")
-        break
-    else:
-        print("Ha guanyat fitxa2")
+    if fitxa == tau[0][65]:
+        guanyador = fitxa 
+        print("Ha guanyat :",  guanyador)
         break
     
     return tau, posi,ID
