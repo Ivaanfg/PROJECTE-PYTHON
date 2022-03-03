@@ -60,9 +60,111 @@ def fitxa(tau, posi, ID):
        tau[0][posi_anterior]="[💀]"
     if posi_anterior == 65:
        tau[0][posi_anterior]="[END]"
+    
 
+       
+    """OCA"""    
+    if fitxa  in tau[0][5]:
+        fitxa = tau[0][9]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][9]:
+        fitxa = tau[0][14]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][14]:
+        fitxa = tau[0][18]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][18]:
+        fitxa = tau[0][23]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][23]:
+        fitxa = tau[0][27]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][27]:
+        fitxa = tau[0][32]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][32]:
+        fitxa = tau[0][36]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][36]:
+        fitxa = tau[0][41]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][41]:
+        fitxa = tau[0][45]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][45]:
+        fitxa = tau[0][50]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][50]:
+        fitxa = tau[0][54]
+        posi += 4
+        print(da)
+    if fitxa  in tau[0][54]:
+        fitxa = tau[0][59]
+        posi += 5
+        print(da)
+    if fitxa  in tau[0][59]:
+        fitxa = tau[0][65]
+        posi += 6
+        print(da)
+    
+    """PONT"""  
+    if fitxa in tau[0][6]: 
+        fitxa = tau[0][12]
+        posi += 6
+        
+    if fitxa in tau[0][12]:
+       fitxa = tau[0][6]
+       posi -= 6
+    
+    """POSADA""" 
+    if fitxa tau[0][19]:
+        
+    """POU""" 
+    if fitxa tau[0][31]:
+        
+    """LAVERINT""" 
+    if fitxa tau[0][42]:
+        
+    """CARCEL""" 
+    if fitxa tau[0][56]:
+        
+    """DAUS""" 
+    if fitxa tau[0][26]:
+        fitxa = tau[0][53]
+        posi += 27
+        
+    if fitxa tau[0][53]:
+        fitxa = tau[0][26]
+        posi -= 27
+        
+    """MORT""" 
+    if fitxa tau[0][58]:
+        fitxa = tau[0][0]
+        posi -= 58
+        
+    """FI""" 
+    if id=1 [0][65]:
+        print("Ha guanyat fitxa1")
+        break
+    else:
+        print("Ha guanyat fitxa2")
+        break
+    
     return tau, posi,ID
+    
 
+    
+    
 def partida():
 
     començar_joc = input("Vols començar el joc? S/N")
@@ -79,6 +181,6 @@ def partida():
                 print(f1)
                 f2, posi2,ID = fitxa(f1, posi2,2)
                 print(f2)
+        
+       
     return f2
-
-""""def caselles_especials():"""
