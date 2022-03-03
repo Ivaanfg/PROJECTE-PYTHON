@@ -66,98 +66,150 @@ def fitxa(tau, posi, ID):
        
     """OCA"""    
     if fitxa  in tau[0][5]:
-        fitxa = tau[0][9]
+        tau[0][9] = fitxa 
         posi += 4
-        print(da)
-    if fitxa  in tau[0][9]:
-        fitxa = tau[0][14]
+        tau[0][5]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][9]:
+        tau[0][14] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][14]:
-        fitxa = tau[0][18]
+        tau[0][9]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][14]:
+        tau[0][18] = fitxa
         posi += 4
-        print(da)
-    if fitxa  in tau[0][18]:
-        fitxa = tau[0][23]
+        tau[0][14]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][18]:
+        tau[0][23] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][23]:
-        fitxa = tau[0][27]
+        tau[0][18]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][23]:
+        tau[0][27] = fitxa
         posi += 4
-        print(da)
-    if fitxa  in tau[0][27]:
-        fitxa = tau[0][32]
+        tau[0][23]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][27]:
+        tau[0][32] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][32]:
-        fitxa = tau[0][36]
+        tau[0][27]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][32]:
+        tau[0][36] = fitxa
         posi += 4
-        print(da)
-    if fitxa  in tau[0][36]:
-        fitxa = tau[0][41]
+        tau[0][32]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][36]:
+        tau[0][41] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][41]:
-        fitxa = tau[0][45]
+        tau[0][36]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][41]:
+        tau[0][45] = fitxa
         posi += 4
-        print(da)
-    if fitxa  in tau[0][45]:
-        fitxa = tau[0][50]
+        tau[0][41]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][45]:
+        tau[0][50] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][50]:
-        fitxa = tau[0][54]
+        tau[0][45]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][50]:
+        tau[0][54] = fitxa
         posi += 4
-        print(da)
-    if fitxa  in tau[0][54]:
-        fitxa = tau[0][59]
+        tau[0][50]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][54]:
+        tau[0][59] = fitxa
         posi += 5
-        print(da)
-    if fitxa  in tau[0][59]:
-        fitxa = tau[0][65]
+        tau[0][54]="[🦆]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
+    elif fitxa  in tau[0][59]:
+        tau[0][65] = fitxa
         posi += 6
-        print(da)
+        tau[0][59]="[🦆]"
     
     """PONT"""  
     if fitxa in tau[0][6]: 
-        fitxa = tau[0][12]
+        tau[0][12] = fitxa
         posi += 6
+        tau[0][6]="[🌉]"
         
     if fitxa in tau[0][12]:
-       fitxa = tau[0][6]
+       tau[0][6] = fitxa
        posi -= 6
+       tau[0][12]="[🌉]"
     
     """POSADA""" 
-    if fitxa tau[0][19]:
-        
+    if fitxa  in tau[0][19]:
+        rondes =  0
+        while rondes != 2:
+            posi -= da
+            rondes += 1
+            
     """POU""" 
-    if fitxa tau[0][31]:
-        
+    if fitxa in tau[0][31]:
+        rondes =  0
+        while rondes != 4:
+            posi -= da
+            rondes += 1
+            
     """LAVERINT""" 
-    if fitxa tau[0][42]:
+    if fitxa in tau[0][42]:
+        tau[0][30] = fitxa
+        posi -= 12
         
     """CARCEL""" 
-    if fitxa tau[0][56]:
-        
+    if fitxa in tau[0][56]:
+        rondes =  0
+        while rondes != 3:
+            posi -= da
+            rondes += 1
+            
     """DAUS""" 
-    if fitxa tau[0][26]:
-        fitxa = tau[0][53]
+    if fitxa in tau[0][26]:
+        tau[0][53] = fitxa
         posi += 27
         
-    if fitxa tau[0][53]:
-        fitxa = tau[0][26]
+    if fitxa in tau[0][53]:
+        tau[0][26] = fitxa
         posi -= 27
         
     """MORT""" 
-    if fitxa tau[0][58]:
-        fitxa = tau[0][0]
+    if fitxa in tau[0][58]:
+        tau[0][0] = fitxa
         posi -= 58
         
     """FI""" 
     if fitxa == tau[0][65]:
         guanyador = fitxa 
         print("Ha guanyat :",  guanyador)
-        break
+    
     
     return tau, posi,ID
     
@@ -183,3 +235,5 @@ def partida():
         
        
     return f2
+
+print(partida())
