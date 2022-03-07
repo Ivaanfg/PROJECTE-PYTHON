@@ -112,11 +112,11 @@ def fitxa(tau, posi, ID):
 
 
     """FI (PENDENT DE REVISIO)"""
-    if posi >= 65:
+    if posi >= 64:
         """Si la fitxa no treu el nombre exacte de caselles per entrar, s'ha de restar el dau a la posició de la fitxa"""
         posi -= da
         tau[0][posi] = fitxa
-    elif fitxa == tau[0][65]:
+    elif fitxa == tau[0][64]:
         guanyador = fitxa
         print("Ha guanyat :", guanyador)
 
