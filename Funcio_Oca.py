@@ -37,7 +37,7 @@ def fitxa(tau, posi, ID):
     posi_anterior = posi - da
     llista_oca = [5, 9, 14, 18, 23, 27, 32, 36, 41, 45, 50, 54, 59]
     psoicions_buies = [1, 2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 17, 20, 21, 22, 24, 25, 28, 29, 30, 33, 34, 35, 37, 38, 39,
-                       40, 43, 44, 46, 47, 48, 48, 51, 52, 53, 57, 60, 61, 62, 63, 64]
+                       40, 43, 44, 46, 47, 48, 48, 51, 52, 53,55, 57, 60, 61, 62, 63, 64]
     if posi_anterior == 0:
         tau[0][posi_anterior] = "[START]"
     if posi_anterior in psoicions_buies:
@@ -177,7 +177,7 @@ def fitxa(tau, posi, ID):
     """POSADA"""
     if fitxa in tau[0][19]:
         rondes = 0
-        while rondes != 2:
+        while rondes != 1:
             posi -= da
             rondes += 1
 
@@ -188,15 +188,16 @@ def fitxa(tau, posi, ID):
             posi -= da
             rondes += 1
 
-    """LAVERINT"""
+    """LAVERINT (Funciona be"""
     if fitxa in tau[0][42]:
         tau[0][30] = fitxa
         posi -= 12
+        tau[0][42] = "[🐍]"
 
     """CARCEL"""
     if fitxa in tau[0][56]:
         rondes = 0
-        while rondes != 3:
+        while rondes != 2:
             posi -= da
             rondes += 1
 
@@ -216,8 +217,13 @@ def fitxa(tau, posi, ID):
         tau[0][0] = fitxa
         posi -= 58
         tau[0][58] = "[💀]"
-    """FI (Funciona)"""
-    if fitxa == tau[0][65]:
+
+    """FI (PENDENT DE REVISIO)"""
+    if posi >= 65:
+        """Si la fitxa no treu el nombre exacte de caselles per entrar, s'ha de restar el dau a la posició de la fitxa"""
+        posi -= da
+        tau[0][posi] = fitxa
+    elif fitxa == tau[0][65]:
         guanyador = fitxa
         print("Ha guanyat :", guanyador)
 
