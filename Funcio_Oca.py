@@ -206,11 +206,17 @@ def fitxa(tau, posi, ID):
         tau[0][53] = fitxa
         posi += 27
         tau[0][26] = "[🎲]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
 
     elif fitxa in tau[0][53]:
         tau[0][26] = fitxa
         posi -= 27
         tau[0][53] = "[🎲]"
+        da = dau()
+        posi += da
+        tau[0][posi] = fitxa
 
     """MORT (Funciona Be"""
     if fitxa in tau[0][58]:
