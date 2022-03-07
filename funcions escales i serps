@@ -44,14 +44,6 @@ def fitxa(tau, posi, ID):
     llista_serps_dalt = [31,41,51,60]
     llista_serps_baix = [3,5,22,43]
 
-"""Si un jugador obtiene tres 6 consecutivos, deberá regresar a la casilla inicial y no podrá mover su ficha hasta obtener nuevamente un 6. if da == 6:
-        tres = 0
-        while tres != 3:
-            da = dau()
-            posi += da
-            tau[0][posi] = fitxa
-            tres += 1"""
-    
 
     if posi_anterior == 0:
         tau[0][posi_anterior] = "[START]"
