@@ -66,113 +66,140 @@ def fitxa(tau, posi, ID):
         tau[0][9] = fitxa
         posi += 4
         tau[0][5] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][9] = "[🦆]"
+
     elif fitxa in tau[0][9]:
         tau[0][14] = fitxa
         posi += 5
         tau[0][9] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][14] = "[🦆]"
+
     elif fitxa in tau[0][14]:
         tau[0][18] = fitxa
         posi += 4
         tau[0][14] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][18] = "[🦆]"
+
     elif fitxa in tau[0][18]:
         tau[0][23] = fitxa
         posi += 5
         tau[0][18] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][23] = "[🦆]"
+
     elif fitxa in tau[0][23]:
         tau[0][27] = fitxa
         posi += 4
         tau[0][23] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][27] = "[🦆]"
+
     elif fitxa in tau[0][27]:
         tau[0][32] = fitxa
         posi += 5
         tau[0][27] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][32] = "[🦆]"
+
     elif fitxa in tau[0][32]:
         tau[0][36] = fitxa
         posi += 4
         tau[0][32] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][36] = "[🦆]"
+
     elif fitxa in tau[0][36]:
         tau[0][41] = fitxa
         posi += 5
         tau[0][36] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][41] = "[🦆]"
+
     elif fitxa in tau[0][41]:
         tau[0][45] = fitxa
         posi += 4
         tau[0][41] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][45] = "[🦆]"
+
     elif fitxa in tau[0][45]:
         tau[0][50] = fitxa
         posi += 5
         tau[0][45] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][50] = "[🦆]"
+
     elif fitxa in tau[0][50]:
         tau[0][54] = fitxa
         posi += 4
         tau[0][50] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][54] = "[🦆]"
+
     elif fitxa in tau[0][54]:
         tau[0][59] = fitxa
         posi += 5
         tau[0][54] = "[🦆]"
+        print("De oca a oca y tiro porque me toca")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
         tau[0][59] = "[🦆]"
+
     elif fitxa in tau[0][59]:
         tau[0][65] = fitxa
         posi += 6
         tau[0][59] = "[🦆]"
+
 
     """PONT(Funciona be)"""
     if fitxa in tau[0][6]:
         tau[0][12] = fitxa
         posi += 6
         tau[0][6] = "[🌉]"
+        print("De pont a pont")
 
     elif fitxa in tau[0][12]:
         tau[0][6] = fitxa
         posi -= 6
         tau[0][12] = "[🌉]"
+        print("De pont a pont")
 
     """POSADA"""
     if fitxa in tau[0][19]:
@@ -180,6 +207,7 @@ def fitxa(tau, posi, ID):
         while rondes != 1:
             posi -= da
             rondes += 1
+        print("Has caigut a la posada perds 1 ronda")
 
     """POU"""
     if fitxa in tau[0][31]:
@@ -187,12 +215,14 @@ def fitxa(tau, posi, ID):
         while rondes != 4:
             posi -= da
             rondes += 1
+        print("Has caigut al pou perds 4 rondes")
 
     """LAVERINT (Funciona be"""
     if fitxa in tau[0][42]:
         tau[0][30] = fitxa
         posi -= 12
         tau[0][42] = "[🐍]"
+        print("Has caigut al laverint perds 12 posicions")
 
     """CARCEL"""
     if fitxa in tau[0][56]:
@@ -200,29 +230,35 @@ def fitxa(tau, posi, ID):
         while rondes != 2:
             posi -= da
             rondes += 1
+        print("Has caigut a la prisió perds  2 rondes")
 
     """DAUS (Funciona be)"""
     if fitxa in tau[0][26]:
         tau[0][53] = fitxa
         posi += 27
         tau[0][26] = "[🎲]"
+        print("De dado a dado y tiro porque me ha tocado")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
+
 
     elif fitxa in tau[0][53]:
         tau[0][26] = fitxa
         posi -= 27
         tau[0][53] = "[🎲]"
+        print("De dado a dado y tiro porque me ha tocado")
         da = dau()
         posi += da
         tau[0][posi] = fitxa
+
 
     """MORT (Funciona Be"""
     if fitxa in tau[0][58]:
         tau[0][0] = fitxa
         posi -= 58
         tau[0][58] = "[💀]"
+        print("Has caigut a la mort i tornes a la posició inicial")
 
     """FI (PENDENT DE REVISIO)"""
     if posi >= 65:
@@ -251,8 +287,8 @@ def partida():
                 print(f1)
                 f2, posi2, ID = fitxa(f1, posi2, 2)
                 print(f2)
-
+        print("Has guanyat")
     return f2
 
 
-print(partida())
+
