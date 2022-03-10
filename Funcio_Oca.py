@@ -201,22 +201,6 @@ def fitxa(tau, posi, ID):
         tau[0][12] = "[🌉]"
         print("De pont a pont")
 
-    """POSADA"""
-    if fitxa in tau[0][19]:
-        rondes = 0
-        while rondes != 1:
-            posi -= da
-            rondes += 1
-        print("Has caigut a la posada perds 1 ronda")
-
-    """POU"""
-    if fitxa in tau[0][31]:
-        rondes = 0
-        while rondes != 4:
-            posi -= da
-            rondes += 1
-        print("Has caigut al pou perds 4 rondes")
-
     """LAVERINT (Funciona be"""
     if fitxa in tau[0][42]:
         tau[0][30] = fitxa
@@ -224,13 +208,6 @@ def fitxa(tau, posi, ID):
         tau[0][42] = "[🐍]"
         print("Has caigut al laverint perds 12 posicions")
 
-    """CARCEL"""
-    if fitxa in tau[0][56]:
-        rondes = 0
-        while rondes != 2:
-            posi -= da
-            rondes += 1
-        print("Has caigut a la prisió perds  2 rondes")
 
     """DAUS (Funciona be)"""
     if fitxa in tau[0][26]:
@@ -280,14 +257,47 @@ def partida():
         f2 = tauler()
         posi1 = 0
         posi2 = 0
-        while posi1 <= 65:
+        while posi1 <= 65 or posi2 <= 65:
             pregunta = input("tirar S/N")
             if (pregunta == "S"):
                 f1, posi1, ID = fitxa(f2, posi1, 1)
                 print(f1)
+                """POSADA"""
+                if posi1 == 19:
+                    f2, posi2, ID = fitxa(f1, posi2, 2)
+                    print("Has caigut a la posada perds 1 ronda")
+                    print(f2)
+                """POU"""
+                if posi1 == 31:
+                    f2, posi2, ID = fitxa(f1, posi2, 2)
+                    print("Has caigut a la posada perds 4 ronda")
+                    print(f2)
+                """CARCEL"""
+                if posi1 == 56:
+                    f2, posi2, ID = fitxa(f1, posi2, 2)
+                    print("Has caigut a la posada perds 2 ronda")
+                    print(f2)
                 f2, posi2, ID = fitxa(f1, posi2, 2)
                 print(f2)
-        print("Has guanyat")
+                """POSADA"""
+                if posi2 == 19:
+                    f1, posi1, ID = fitxa(f2, posi1, 1)
+                    print("Has caigut a la posada perds 1 ronda")
+                    print(f1)
+                """POU"""
+                if posi2 == 31:
+                    f1, posi1, ID = fitxa(f2, posi1, 1)
+                    print("Has caigut a la posada perds 4 ronda")
+                    print(f1)
+                """CARCEL"""
+                if posi2 == 56:
+                    f1, posi1, ID = fitxa(f2, posi1, 1)
+                    print("Has caigut a la posada perds 2 ronda")
+                    print(f1)
+        else:
+            print("Has guanyat !")
+
+
     return f2
 
 
