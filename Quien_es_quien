@@ -1,1 +1,26 @@
+tablero = {'Ivan': "Home", 'Joan': "Home", 'Arnau': "Home", 'Teresa': "Dona", 'Maria': "Dona",
+           'Susana': "Dona",'Ramon': "Home", 'Eustakia': "Dona"}
+
+preguntes = ["1 : ÉS HOME?", "2 : ÉS DONA?", "3 : PEL LLARG?", "4 : PEL CURT?", "5 : PEL ROIG?"
+    , "6 : PEL NEGRE?", "7 : PEL CASTANY?", "8 : PEL MORENO?", "9 : ULLS NEGRES?", "10 : ULLS BLAUS?"
+    , "11 : ULLS VERDS?", "12 : ULLS MARRONS?", "13 : PORTA ULLERES?", "14 : NAS GRAN?", "15 : NAS PETIT?"]
+
+
+def pregunta(var):
+    import random
+    print(random.randint(preguntes))
+    preg = input()
+    if preg == "si":
+        rem_key = {n_key: n_val for n_key, n_val in tablero.items() if n_val != var}
+        tablero.clear()
+        tablero.update(rem_key)
+        print([*tablero])
+    else:
+        rem_key = {n_key: n_val for n_key, n_val in tablero.items() if n_val == var}
+        tablero.clear()
+        tablero.update(rem_key)
+        print([*tablero])
+
+
+pregunta("Dona")
 
