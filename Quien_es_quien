@@ -1,28 +1,39 @@
-tablero = {'Ivan': "Home", 'Joan': "Home", 'Arnau': "Home", 'Teresa': "Dona", 'Maria': "Dona",
-           'Susana': "Dona",'Ramon': "Home", 'Eustakia': "Dona"}
+tableropc = {'Ivan': ["Home","pel curt","pel castany","ulls marrons","nas petit"],
+            'Joan': ["Home","pel curt","pel castany","ulls negres","nas gran"],
+            'Arnau': ["Home","pel curt","pel negre","ulls verds","porta ulleres","nas gran"],
+            'Teresa': ["Dona","pel llarg","pel roig","ulls negres","nas petit"],
+            'Maria': ["Dona","pel llarg","pel castany","ulls verds","porta ulleres","nas gran"],
+            'Susana': ["Dona","pel llarg","pel negre","ulls blaus","nas petit"],
+            'Ramon': ["Home","pel llarg","pel roig","ulls blaus","porta ulleres","nas gran"],
+            'Elisabeth': ["Dona","pel curt","pel negre","ulls verds","porta ulleres","nas petit"]}
+
+tablerouser = {'Ferran': ["Home","pel curt","pel castany","ulls marrons","nas petit"],
+                'Miquel': ["Home","pel curt","pel castany","ulls negres","nas gran"],
+                'Llorenç': ["Home","pel curt","pel negre","ulls verds","porta ulleres","nas gran"],
+                'Ramona': ["Dona","pel llarg","pel roig","ulls negres","nas petit"],
+                'Alicia': ["Dona","pel llarg","pel castany","ulls verds","porta ulleres","nas gran"],
+                'Abril': ["Dona","pel llarg","pel negre","ulls blaus","nas petit"],
+                'Albert': ["Home","pel llarg","pel roig","ulls blaus","porta ulleres","nas gran"],
+                'Toni': ["Dona","pel curt","pel negre","ulls verds","porta ulleres","nas petit"]}
 
 preguntes = ["1 : ÉS HOME?", "2 : ÉS DONA?", "3 : PEL LLARG?", "4 : PEL CURT?", "5 : PEL ROIG?"
-    , "6 : PEL NEGRE?", "7 : PEL CASTANY?", "8 : PEL MORENO?", "9 : ULLS NEGRES?", "10 : ULLS BLAUS?"
-    , "11 : ULLS VERDS?", "12 : ULLS MARRONS?", "13 : PORTA ULLERES?", "14 : NAS GRAN?", "15 : NAS PETIT?"]
+            , "6 : PEL NEGRE?", "7 : PEL CASTANY?", "8 : PEL MORENO?", "9 : ULLS NEGRES?", "10 : ULLS BLAUS?"
+            , "11 : ULLS VERDS?", "12 : ULLS MARRONS?", "13 : PORTA ULLERES?", "14 : NAS GRAN?", "15 : NAS PETIT?"]
 
 
 def pregunta(var):
-    import random
-    print(random.randint(preguntes))
-    preg = input()
-    
+    vari = 10
+    while vari != 7:
+        import random
+        print(random.randint(preguntes))
+        preg = input()
     if preg == "si":
-        rem_key = {n_key: n_val for n_key, n_val in tablero.items() if n_val != var}
-        tablero.clear()
-        tablero.update(rem_key)
-        print([*tablero])
-    
+        rem_key = {n_key: n_val for n_key, n_val in tablerouser.items() if n_val != var}
+        tablerouser.clear()
+        tablerouser.update(rem_key)
+        print([*tablerouser])
     else:
-        rem_key = {n_key: n_val for n_key, n_val in tablero.items() if n_val == var}
-        tablero.clear()
-        tablero.update(rem_key)
-        print([*tablero])
-
-
-    return pregunta("Dona")
-
+        rem_key = {n_key: n_val for n_key, n_val in tablerouser.items() if n_val == var}
+        tablerouser.clear()
+        tablerouser.update(rem_key)
+        print([*tablerouser])
