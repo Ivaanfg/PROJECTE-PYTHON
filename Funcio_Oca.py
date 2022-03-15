@@ -4,7 +4,6 @@ def dau():
     print("Llançant el dau ...", "Ha sortit:", dado)
     return dado
 
-
 def tauler():
     tablero = {0: ["[START]", "[]", "[]", "[]", "[]", "[🦆]", "[🌉]", "[]", "[]", "[🦆]", "[]",
                    "[]", "[🌉]", "[]", "[🦆]", "[]", "[]", "[]", "[🦆]", "[🏠]", "[]", "[]",
@@ -19,7 +18,6 @@ def tauler():
     print()
     return tablero
 
-
 def fitxa(tau, posi, ID):
     guanyador = ""
     fitxa = "codi"
@@ -33,15 +31,17 @@ def fitxa(tau, posi, ID):
     da = dau()
     posi += da
     if posi >= 65:
-        print("Ha guanyat:",fitxa)
+        print("Ha guanyat:", fitxa)
         posi = 65
     else:
         casella = tau[0][posi]
         tau[0][posi] = fitxa
         posi_anterior = posi - da
         llista_oca = [5, 9, 14, 18, 23, 27, 32, 36, 41, 45, 50, 54, 59]
-        psoicions_buies = [1, 2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 17, 20, 21, 22, 24, 25, 28, 29, 30, 33, 34, 35, 37, 38, 39,
-                           40, 43, 44, 46, 47, 48, 48, 51, 52, 53,55, 57, 60, 61, 62, 63, 64]
+        psoicions_buies = [1, 2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 17, 20, 
+                           21, 22, 24, 25, 28, 29, 30, 33, 34, 35, 37, 38,
+                           39,40, 43, 44, 46, 47, 48, 48, 51, 52, 53, 55, 57, 
+                           60, 61, 62, 63, 64]
         if posi_anterior == 0:
             tau[0][posi_anterior] = "[START]"
         if posi_anterior in psoicions_buies:
@@ -191,7 +191,6 @@ def fitxa(tau, posi, ID):
             posi += 6
             tau[0][59] = "[🦆]"
 
-
         """PONT(Funciona be)"""
         if fitxa in tau[0][6]:
             tau[0][12] = fitxa
@@ -212,7 +211,6 @@ def fitxa(tau, posi, ID):
             tau[0][42] = "[🐍]"
             print("Has caigut al laverint perds 12 posicions")
 
-
         """DAUS (Funciona be)"""
         if fitxa in tau[0][26]:
             tau[0][53] = fitxa
@@ -223,7 +221,6 @@ def fitxa(tau, posi, ID):
             posi += da
             tau[0][posi] = fitxa
 
-
         elif fitxa in tau[0][53]:
             tau[0][26] = fitxa
             posi -= 27
@@ -233,7 +230,6 @@ def fitxa(tau, posi, ID):
             posi += da
             tau[0][posi] = fitxa
 
-
         """MORT (Funciona Be"""
         if fitxa in tau[0][58]:
             tau[0][0] = fitxa
@@ -241,12 +237,11 @@ def fitxa(tau, posi, ID):
             tau[0][58] = "[💀]"
             print("Has caigut a la mort i tornes a la posició inicial")
 
-
-
     return tau, posi, ID
 
 
 def partida():
+    
     començar_joc = input("Vols començar el joc? S/N")
     if començar_joc == "S":
         print("Jugador 1 : 🟨")
@@ -255,69 +250,71 @@ def partida():
         posi1 = 0
         posi2 = 0
         while posi1 < 65 or posi2 < 65:
-                pregunta = input("tirar S/N")
-                if posi1 == 65 or posi2 ==65:
-                    break
-                if (pregunta == "S"):
+            pregunta = input("tirar S/N")
+            if posi1 == 65 or posi2 == 65:
+                break
+            if (pregunta == "S"):
 
-                    f1, posi1, ID = fitxa(f2, posi1, 1)
-                    print(posi1)
-                    print(f1)
-                    """POSADA"""
-                    if posi1 == 19:
-                        f2, posi2, ID = fitxa(f1, posi2, 2)
-                        print("Has caigut a la posada perds 1 ronda")
-                        print(f2)
-                    """POU"""
-                    if posi1 == 31:
-                        vari = 0
-                        while vari != 4:
-                            f2, posi2, ID = fitxa(f1, posi2, 2)
-                            print("Has caigut al pou perds 4 ronda")
-                            print(f2)
-                            vari += 1
+                f1, posi1, ID = fitxa(f2, posi1, 1)
+                print(posi1)
+                print(f1)
 
-                    """CARCEL"""
-                    if posi1 == 56:
-                        vari = 0
-                        while vari != 2:
-                            f2, posi2, ID = fitxa(f1, posi2, 2)
-                            print("Has caigut a la carcel perds 2 ronda")
-                            print(f2)
-                            vari += 1
-                    if posi1 == 65:
-                        break
+                """POSADA"""
+                if posi1 == 19:
                     f2, posi2, ID = fitxa(f1, posi2, 2)
-                    print(posi2)
+                    print("Has caigut a la posada perds 1 ronda")
                     print(f2)
-                    """POSADA"""
-                    if posi2 == 19:
+
+                """POU"""
+                if posi1 == 31:
+                    vari = 0
+                    while vari != 4:
+                        f2, posi2, ID = fitxa(f1, posi2, 2)
+                        print("Has caigut al pou perds 4 ronda")
+                        print(f2)
+                        vari += 1
+
+                """CARCEL"""
+                if posi1 == 56:
+                    vari = 0
+                    while vari != 2:
+                        f2, posi2, ID = fitxa(f1, posi2, 2)
+                        print("Has caigut a la carcel perds 2 ronda")
+                        print(f2)
+                        vari += 1
+                        print("soc la posició del jugador :", posi1)
+                if posi1 == 65:
+                    break
+                f2, posi2, ID = fitxa(f1, posi2, 2)
+                print(posi2)
+                print(f2)
+
+                """POSADA"""
+                if posi2 == 19:
+                    f1, posi1, ID = fitxa(f2, posi1, 1)
+                    print("Has caigut a la posada perds 1 ronda")
+                    print(f1)
+
+                """POU"""
+                if posi2 == 31:
+                    vari = 0
+                    while vari != 4:
                         f1, posi1, ID = fitxa(f2, posi1, 1)
-                        print("Has caigut a la posada perds 1 ronda")
+                        print("Has caigut al pou perds 4 ronda")
                         print(f1)
-                    """POU"""
-                    if posi2 == 31:
-                        vari = 0
-                        while vari != 4:
-                            f1, posi1, ID = fitxa(f2, posi1, 1)
-                            print("Has caigut al pou perds 4 ronda")
-                            print(f1)
-                            vari += 1
-                    """CARCEL"""
-                    if posi2 == 56:
-                        vari = 0
-                        while vari != 2:
-                            f1, posi1, ID = fitxa(f2, posi1, 1)
-                            print("Has caigut a la carcel perds 2 ronda")
-                            print(f1)
-                            vari += 1
-                    if posi2 == 65:
-                        break
+                        vari += 1
+
+                """CARCEL"""
+                if posi2 == 56:
+                    vari = 0
+                    while vari != 2:
+                        f1, posi1, ID = fitxa(f2, posi1, 1)
+                        print("Has caigut a la carcel perds 2 ronda")
+                        print(f1)
+                        vari += 1
+
+                if posi2 == 65:
+                    break
 
 
-
-    return f2
-
-print(partida())
-
-
+partida()
