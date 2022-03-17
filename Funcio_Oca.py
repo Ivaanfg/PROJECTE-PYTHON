@@ -38,9 +38,9 @@ def fitxa(tau, posi, ID):
         tau[0][posi] = fitxa
         posi_anterior = posi - da
         llista_oca = [5, 9, 14, 18, 23, 27, 32, 36, 41, 45, 50, 54, 59]
-        psoicions_buies = [1, 2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 17, 20, 
+        psoicions_buies = [1, 2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 17, 20,
                            21, 22, 24, 25, 28, 29, 30, 33, 34, 35, 37, 38,
-                           39,40, 43, 44, 46, 47, 48, 48, 51, 52, 53, 55, 57, 
+                           39,40, 43, 44, 46, 47, 48, 48, 51, 52, 53, 55, 57,
                            60, 61, 62, 63, 64]
         if posi_anterior == 0:
             tau[0][posi_anterior] = "[START]"
@@ -214,21 +214,23 @@ def fitxa(tau, posi, ID):
         """DAUS (Funciona be)"""
         if fitxa in tau[0][26]:
             tau[0][53] = fitxa
-            posi += 27
+            posi = 53
             tau[0][26] = "[🎲]"
             print("De dado a dado y tiro porque me ha tocado")
             da = dau()
             posi += da
             tau[0][posi] = fitxa
+            tau[0][53] = "[🎲]"
 
         elif fitxa in tau[0][53]:
             tau[0][26] = fitxa
-            posi -= 27
+            posi = 26
             tau[0][53] = "[🎲]"
             print("De dado a dado y tiro porque me ha tocado")
             da = dau()
             posi += da
             tau[0][posi] = fitxa
+            tau[0][26] = "[🎲]"
 
         """MORT (Funciona Be"""
         if fitxa in tau[0][58]:
@@ -241,7 +243,7 @@ def fitxa(tau, posi, ID):
 
 
 def partida():
-    
+
     començar_joc = input("Vols començar el joc? S/N")
     if començar_joc == "S":
         print("Jugador 1 : 🟨")
