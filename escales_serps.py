@@ -75,52 +75,52 @@ def fitxa(tau, posi, ID):
         """ESCALES"""
         if fitxa in tau[0][8]:
             tau[0][39] = fitxa
-            posi += 31
+            posi = 39
             tau[0][6] = "[🪜(baix)]"
             print("Pujes fins la posició 39")
 
 
         elif fitxa in tau[0][12]:
             tau[0][38] = fitxa
-            posi += 26
+            posi = 28
             tau[0][12] = "[🪜(baix)]"
             print("Pujes fins la posició 38")
 
         elif fitxa in tau[0][32]:
             tau[0][47] = fitxa
-            posi += 15
+            posi = 47
             tau[0][32] = "[🪜(baix)]"
             print("Pujes fins la posició 47")
 
         elif fitxa in tau[0][44]:
             tau[0][61] = fitxa
-            posi += 17
+            posi = 61
             tau[0][44] = "[🪜(baix)]"
             print("Pujes fins la posició 61")
 
         """SERPS"""
         if fitxa in tau[0][31]:
             tau[0][3] = fitxa
-            posi -= 28
+            posi = 3
             tau[0][31] = "[🐍(coa)]"
             print("Baixes fins la posició 3")
 
         elif fitxa in tau[0][41]:
             tau[0][22] = fitxa
-            posi -= 19
+            posi = 22
             tau[0][41] = "[🐍(coa)]"
             print("Baixes fins la posició 22")
 
         elif fitxa in tau[0][51]:
             tau[0][5] = fitxa
-            posi -= 46
+            posi = 5
             tau[0][51] = "[🐍(coa)]"
             print("Baixes fins la posició 5")
 
 
         elif fitxa in tau[0][60]:
             tau[0][43] = fitxa
-            posi -= 17
+            posi = 43
             tau[0][60] = "[🐍(coa)]"
             print("Baixes fins la posició 43")
 
@@ -139,7 +139,7 @@ def partida():
         f2 = tauler()
         posi1 = 0
         posi2 = 0
-        while posi1 <= 65:
+        while posi1 < 65:
             if posi1 == 65 or posi2 == 65:
                 break
             pregunta = input("tirar S/N")
