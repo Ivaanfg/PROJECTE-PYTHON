@@ -1,22 +1,22 @@
 import random
 
-tableropc = {'Ivan': ["Home", "pel curt", "pel negre", "ulls blaus", "nas petit","té barba"],
-             'Joan': ["Home", "pel curt", "pel roig", "ulls negres", "nas gran","té barba"],
-             'Arnau': ["Home", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas gran","té barba"],
-             'Teresa': ["Dona", "pel llarg", "pel roig", "ulls negres", "nas petit","té anelleta"],
-             'Maria': ["Dona", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran","té analleta"],
-             'Susana': ["Dona", "pel llarg", "pel negre", "ulls negres", "nas petit"],
-             'Ramon': ["Home", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran"],
-             'Elisabeth': ["Dona", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas petit"]}
+tableropc = {'Ivan': ["home", "pel curt", "pel negre", "ulls blaus", "nas petit","té barba"],
+             'Joan': ["home", "pel curt", "pel roig", "ulls negres", "nas gran","té barba"],
+             'Arnau': ["home", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas gran","té barba"],
+             'Teresa': ["dona", "pel llarg", "pel roig", "ulls negres", "nas petit","té anelleta"],
+             'Maria': ["dona", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran","té analleta"],
+             'Susana': ["dona", "pel llarg", "pel negre", "ulls negres", "nas petit"],
+             'Ramon': ["home", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran"],
+             'Elisabeth': ["dona", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas petit"]}
 
-tablerouser = {'Ferran': ["Home", "pel curt", "pel roig", "ulls blaus", "nas petit","té barba"],
-               'Miquel': ["Home", "pel curt", "pel roig", "ulls negres", "nas gran"],
-               'Llorenç': ["Home", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas gran","té barba"],
-               'Ramona': ["Dona", "pel llarg", "pel roig", "ulls negres", "nas petit"],
-               'Alicia': ["Dona", "pel llarg", "pel negre", "ulls negres", "porta ulleres", "nas gran","porta anelleta"],
-               'Abril': ["Dona", "pel llarg", "pel negre", "ulls blaus", "nas petit"],
-               'Albert': ["Home", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran","té barba"],
-               'Toni': ["Dona", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas petit","porta anelleta"]}
+tablerouser = {'Ferran': ["home", "pel curt", "pel roig", "ulls blaus", "nas petit","té barba"],
+               'Miquel': ["home", "pel curt", "pel roig", "ulls negres", "nas gran"],
+               'Llorenç': ["home", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas gran","té barba"],
+               'Ramona': ["dona", "pel llarg", "pel roig", "ulls negres", "nas petit"],
+               'Alicia': ["dona", "pel llarg", "pel negre", "ulls negres", "porta ulleres", "nas gran","porta anelleta"],
+               'Abril': ["dona", "pel llarg", "pel negre", "ulls blaus", "nas petit"],
+               'Albert': ["home", "pel llarg", "pel roig", "ulls blaus", "porta ulleres", "nas gran","té barba"],
+               'Toni': ["dona", "pel curt", "pel negre", "ulls negres", "porta ulleres", "nas petit","porta anelleta"]}
 
 preguntes = ["1 : ÉS HOME?","2 : PEL LLARG?", "3 : PEL NEGRE?","5 : ULLS NEGRES?",
              "6 : PORTA ULLERES?", "7 : NAS GRAN?","TÉ BARBA?","9 : PORTA ANELLETA?"]
@@ -48,5 +48,29 @@ def buclePc():
         print(pregunta_pc)
         resposta = input()
         pregunta(pregunta_num, resposta)
+
+        if resposta == "si" in preguntes[0]: 
+            for x in tablerouser:
+                for y in tablerouser[x]:
+                    if tablerouser[y] == "dona":
+                        tablerouser.pop(x)
+
+        if resposta == "si" in preguntes[1]:
+            
+        if resposta == "si" in preguntes[2]:
+            
+        if resposta == "si" in preguntes[3]:
+            
+        if resposta == "si" in preguntes[4]:
+            
+        if resposta == "si" in preguntes[5]:
+            
+        if resposta == "si" in preguntes[6]:
+            
+        if resposta == "si" in preguntes[7]:
+            
+        print(tablerouser)
+
+
 
 buclePc()
