@@ -59,16 +59,12 @@ Día 14:
 Hem acabat de aclarir petits problemes de la oca.
 Día 15:
 ------
-
-Día 11:
+Esteim mirant de fer que elimini els personatges del quien es quien.
+Día 16:
 ------
 
 Día 11:
 ------
-dici= {joan: poma
-	ivan: pera
-	pere: poma}
 
-[dici.pop(key) for value in [joan,ivan,pere] = "poma"]
 
 
