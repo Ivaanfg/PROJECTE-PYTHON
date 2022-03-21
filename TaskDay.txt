@@ -65,5 +65,10 @@ Día 11:
 
 Día 11:
 ------
+dici= {joan: poma
+	ivan: pera
+	pere: poma}
+
+[dici.pop(key) for value in [joan,ivan,pere] = "poma"]
 
 
