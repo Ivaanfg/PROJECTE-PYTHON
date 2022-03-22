@@ -1,7 +1,7 @@
 print("La Oca = 1")
 print("Escales i serps = 2")
 print("Quien es quien = 3")
-triar = input("A quin joc vols jugar? (1,2 o 3): ")
+triar = int(input("A quin joc vols jugar? (1,2 o 3): "))
 if triar == 1:
     from Funcio_Oca import dau,tauler,fitxa,partida
     print(partida())
