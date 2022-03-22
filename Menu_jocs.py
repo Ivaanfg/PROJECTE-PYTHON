@@ -7,7 +7,7 @@ if triar == 1:
     print(partida())
 if triar == 2:
     from escales_serps import dau,tauler,fitxa,partida
-    prin(partida())
+    print(partida())
 if triar == 3:
     from Quien_es_quien import pregunta,buclePc
     print(buclePc())
