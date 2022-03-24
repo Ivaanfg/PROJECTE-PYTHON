@@ -154,8 +154,3 @@ def partida():
                 print(f2)
                 if posi2 == 65:
                     break
-
-
-
-
-partida()
